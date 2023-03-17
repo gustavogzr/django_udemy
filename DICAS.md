@@ -8,6 +8,9 @@ django-admin startproject django1_project . *criar projeto django - não esquece
 django-admin startapp core *criar novo app com nome core*
 LANGUAGE_CODE = 'pt-br' *ajustar linguagem em settings*
 
+python manage.py makemigrations *criar arquivo de migração de modelos*
+python manage.py migrate *executa a migração dos modelos gerados via makemigrations*
+
 python manage.py runserver *iniciar o servidor*
 CTRL+C *parar servidor*
 cls *limpar tela do cmd*
