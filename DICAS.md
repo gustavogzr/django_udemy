@@ -14,6 +14,8 @@ python manage.py migrate *executa a migração dos modelos gerados via makemigra
 python manage.py runserver *iniciar o servidor*
 CTRL+C *parar servidor*
 cls *limpar tela do cmd*
+python manage.py createsuperuser *criar admin*
+python manage.py shell *carrega um console Python*
 
 pip freeze > requirements.txt *salvar versões das bibliotecas*
 
