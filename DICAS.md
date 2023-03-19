@@ -16,6 +16,7 @@ CTRL+C *parar servidor*
 cls *limpar tela do cmd*
 python manage.py createsuperuser *criar admin*
 python manage.py shell *carrega um console Python*
+python manage.py collectstatic *junta os arquivos estáticos (css, js, imagens etc) em uma única pasta*
 
 pip freeze > requirements.txt *salvar versões das bibliotecas*
 
