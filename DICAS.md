@@ -19,5 +19,9 @@ python manage.py shell *carrega um console Python*
 python manage.py collectstatic *junta os arquivos estáticos (css, js, imagens etc) em uma única pasta*
 
 pip freeze > requirements.txt *salvar versões das bibliotecas*
+pip install -r requirements.txt *instalar todos os apps do arquivo requirements.txt*
 
 touch .gitignore *criar arquivo .gitignore para ignorar pasta e arquivos*
+
+https://www.heroku.com/ *publicar site*
+https://devcenter.heroku.com/articles/getting-started-with-python *baixar instalador para o computador*
