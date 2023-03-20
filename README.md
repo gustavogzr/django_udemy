@@ -5,4 +5,5 @@ Programação Web com Python e Django Framework: Essencial
 - **16/03/2026:** Aulas 16, 17, 18, 19, 20, 21, 22
 - **17/03/2026:** Aulas 23, 24, 25, 26, 27, 28, 29, 30
 - **18/03/2026:** Aulas 31, 32
+- **18/03/2026:** Aulas 33, 34, 35, 36, 37, 38
 

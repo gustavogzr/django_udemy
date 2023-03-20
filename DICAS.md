@@ -7,6 +7,7 @@ pip install django *instalar django*
 django-admin startproject django1_project . *criar projeto django - não esquecer do ponto final*
 django-admin startapp core *criar novo app com nome core*
 LANGUAGE_CODE = 'pt-br' *ajustar linguagem em settings*
+TIME_ZONE = 'America/Sao_Paulo' *ajustar timezone*
 
 python manage.py makemigrations *criar arquivo de migração de modelos*
 python manage.py migrate *executa a migração dos modelos gerados via makemigrations*
