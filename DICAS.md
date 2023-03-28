@@ -24,7 +24,7 @@ pip install -r requirements.txt *instalar todos os apps do arquivo requirements.
 
 touch .gitignore *criar arquivo .gitignore para ignorar pasta e arquivos*
 
-https://www.heroku.com/ *publicar site*
-https://devcenter.heroku.com/articles/getting-started-with-python *baixar instalador para o computador*
+<https://www.heroku.com/> *publicar site*
+<https://devcenter.heroku.com/articles/getting-started-with-python> *baixar instalador para o computador*
 heroku login *comando para abrir a tela de login*
 heroku create django1-gzr --buildpack heroku/python *criar instância web*
