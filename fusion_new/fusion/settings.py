@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -77,6 +78,7 @@ WSGI_APPLICATION = 'fusion.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 usar_sqlite = True
+usar_heroku = False
 
 if usar_sqlite:
     DATABASES = {
@@ -85,7 +87,10 @@ if usar_sqlite:
             'NAME': BASE_DIR / 'fusion_db.sqlite3',
         }
     }
-
+elif usar_heroku:
+    DATABASES = {
+        'default': dj_database_url.config()
+    }
 else:
     DATABASES = {
         'default': {
@@ -157,3 +162,5 @@ EMAIL_HOST_PASSWORD = 'fusion123'
 DEFAULT_FROM_EMAIL = 'contato@fusion.com.br'
 
 """
+
+LOGOUT_REDIRECT_URL = 'index' # redireciona para a página inicial após logout
