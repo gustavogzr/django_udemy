@@ -56,3 +56,31 @@ Para acessar os relatórios em HTML, acessa a pasta htmlcov e execute o seguinte
 ~~~bash
 python -m http.server
 ~~~
+
+Para usar o model_mommy, realizar os comando abaixo:
+
+~~~bash
+python manage.py shell
+~~~
+
+~~~python
+from model_mommy import mommy
+
+cargo = mommy.make('core.Cargo') # cria um objeto de teste do model Cargo
+cargo # exibe o objeto criado
+cargo.cargo # exibe o nome do cargo criado automaticamente pelo model_mommy
+cargo.cargo = "Gerente" # altera o nome do cargo
+cargo.cargo # exibe o nome do cargo alterado
+cargo.save() # salva o objeto no banco de dados
+
+servicos = mommy.make('core.Servico', _quantity=5) # cria 5 objetos de teste do model Servico
+servicos # exibe os objetos criados
+servicos[0].servico # exibe o nome do serviço criado automaticamente pelo model_mommy
+servicos[0].descricao # exibe a descrição do serviço criado automaticamente pelo model_mommy
+servicos[0].icone # exibe o ícone do serviço criado automaticamente pelo model_mommy
+
+funcionarios = mommy.make('core.Funcionario', _quantity=3) # cria 3 objetos de teste do model Funcionario
+funcionarios # exibe os objetos criados
+funcionarios[0] # exibe o objeto criado
+funcionarios[0].cargo # exibe o cargo do funcionário criado automaticamente pelo model_mommy
+~~~
