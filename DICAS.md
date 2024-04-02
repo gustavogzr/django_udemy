@@ -1,5 +1,7 @@
 # Dicas de Comandos
 
+## Comandos Gerais de Python e Django
+
 python -m venv .venv *criar ambiente virtual*
 .venv\Scripts\activate *ativar venv*
 
@@ -15,9 +17,13 @@ python manage.py migrate *executa a migração dos modelos gerados via makemigra
 python manage.py runserver *iniciar o servidor*
 CTRL+C *parar servidor*
 cls *limpar tela do cmd*
-python manage.py createsuperuser *criar admin*
-python manage.py shell *carrega um console Python*
-python manage.py collectstatic *junta os arquivos estáticos (css, js, imagens etc) em uma única pasta*
+
+~~~bash
+python manage.py createsuperuser # criar admin
+python manage.py shell # carrega um console Python
+python manage.py collectstatic # junta os arquivos estáticos (css, js, imagens etc) em uma única pasta
+python manage.py test # executa os testes
+~~~
 
 pip freeze > requirements.txt *salvar versões das bibliotecas*
 pip install -r requirements.txt *instalar todos os apps do arquivo requirements.txt*
@@ -28,3 +34,25 @@ touch .gitignore *criar arquivo .gitignore para ignorar pasta e arquivos*
 <https://devcenter.heroku.com/articles/getting-started-with-python> *baixar instalador para o computador*
 heroku login *comando para abrir a tela de login*
 heroku create django1-gzr --buildpack heroku/python *criar instância web*
+
+## Testes do Django
+
+Serão utilizadas as bibliotecas model_mommy e coverage para testes. O model_mommy é utilizado para criar objetos de teste e o coverage para verificar a cobertura dos testes. Para instalar as bibliotecas, execute os comandos abaixo:
+
+~~~bash
+pip install model_mommy coverage
+~~~
+
+Para usar o coverage, execute os comandos abaixo para rodar os testes, verificar o relatório de cobertura e abrir o relatório no navegador:
+
+~~~bash
+coverage run manage.py test
+coverage report
+coverage html
+~~~
+
+Para acessar os relatórios em HTML, acessa a pasta htmlcov e execute o seguinte comando:
+
+~~~bash
+python -m http.server
+~~~
