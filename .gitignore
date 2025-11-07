@@ -1,5 +1,6 @@
 .venv/
 venv/
+venv_linux/
 arquivo_secreto.txt
 __pycache__
 *.*~

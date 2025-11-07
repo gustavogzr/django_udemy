@@ -84,3 +84,10 @@ funcionarios # exibe os objetos criados
 funcionarios[0] # exibe o objeto criado
 funcionarios[0].cargo # exibe o cargo do funcionário criado automaticamente pelo model_mommy
 ~~~
+
+## Traduções
+
+```bash
+python manage.py makemessages -l es # criar arquivo de tradução para espanhol
+python manage.py compilemessages # compilar os arquivos de tradução
+```

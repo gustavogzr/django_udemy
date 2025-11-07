@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -164,3 +165,7 @@ DEFAULT_FROM_EMAIL = 'contato@fusion.com.br'
 """
 
 LOGOUT_REDIRECT_URL = 'index' # redireciona para a página inicial após logout
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
