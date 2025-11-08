@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth import get_user_model
 
 # Create your models here.
 
@@ -31,9 +32,14 @@ class Carro(models.Model):
     # Many to One Relationship (Foreign Key):
     Cada carro está associado a uma montadora,
     mas uma montadora pode ter vários carros.
+
+    # Many to Many Relationship:
+    Cada carro pode ser dirigido por vários motoristas,
+    e cada motorista pode dirigir vários carros.
     """
     chassi = models.OneToOneField(Chassi, on_delete=models.CASCADE) # Relacionamento Um para Um
     montadora = models.ForeignKey(Montadora, on_delete=models.CASCADE) # Relacionamento Muitos para Um
+    motoristas = models.ManyToManyField(get_user_model()) # Relacionamento Muitos para Muitos
     modelo = models.CharField('Modelo', max_length=30, help_text='Modelo do carro. Máximo de 30 caracteres.')
     preco = models.DecimalField('Preço', max_digits=8, decimal_places=2)
 
