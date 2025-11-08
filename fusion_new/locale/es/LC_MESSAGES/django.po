@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-07 16:54-0300\n"
-"PO-Revision-Date: 2025-11-07 17:04-0300\n"
+"POT-Creation-Date: 2025-11-07 22:35-0300\n"
+"PO-Revision-Date: 2025-11-07 22:39-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -83,7 +83,7 @@ msgstr "Descripción"
 msgid "Ícone"
 msgstr "Icono"
 
-#: core/models.py:35
+#: core/models.py:35 core/templates/base.html:50
 msgid "Serviços"
 msgstr "Servicios"
 
@@ -126,6 +126,70 @@ msgstr "Empleado"
 #: core/models.py:80
 msgid "Funcionários"
 msgstr "Empleados"
+
+#: core/templates/404.html:11
+msgid "Página não Encontrada"
+msgstr "Página no Encontrada"
+
+#: core/templates/404.html:12
+msgid "Infelizmente a página que você procura não está disponível"
+msgstr "Lamentablemente, la página que busca no está disponible."
+
+#: core/templates/404.html:14 core/templates/500.html:14
+msgid "Volte para a página principal"
+msgstr "Volver a la página principal"
+
+#: core/templates/500.html:11
+msgid "Erro de Processamento"
+msgstr "Error de Procesamiento"
+
+#: core/templates/500.html:12
+msgid "Infelizmente não foi possível processar a requisição."
+msgstr "Lamentablemente, no pudimos procesar su solicitud."
+
+#: core/templates/base.html:45
+msgid "Início"
+msgstr "Inicio"
+
+#: core/templates/base.html:55
+msgid "Equipe"
+msgstr "Equipo"
+
+#: core/templates/base.html:60
+msgid "Preços"
+msgstr "Precios"
+
+#: core/templates/base.html:65
+msgid "Clientes"
+msgstr "Clientes"
+
+#: core/templates/base.html:70
+msgid "Contato"
+msgstr "Contacto"
+
+#: core/templates/hero.html:9
+msgid "Com a Fusion sua empresa poderá ir mais longe"
+msgstr "Con Fusion, su empresa podrá llegar más lejos."
+
+#: core/templates/hero.html:9
+msgid "Nós da Fusion fazemos mais por você"
+msgstr "En Fusion hacemos más por usted."
+
+#: core/templates/hero.html:10
+msgid ""
+"Você irá mais longe. Nós não estudamos na Geek University para ganhar pouco "
+"dinheiro!"
+msgstr ""
+"Llegarás más lejos. ¡No estudiamos en la Universidad Geek para ganar poco "
+"dinero!"
+
+#: core/templates/hero.html:12
+msgid "Saiba mais"
+msgstr "Más información"
+
+#: core/templates/hero.html:13
+msgid "Entre em contato"
+msgstr "Póngase en contacto con nosotros"
 
 #: core/views.py:28
 msgid "E-mail enviado com sucesso!"

@@ -5,6 +5,7 @@
 ~~~bash
 python -m venv .venv # criar ambiente virtual
 .venv\Scripts\activate # ativar venv
+source venv_linux/bin/activate # ativar venv em linux/mac
 
 pip install django # instalar django
 django-admin startproject django1_project . # criar projeto django - não esquecer do ponto final
