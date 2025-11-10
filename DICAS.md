@@ -88,7 +88,34 @@ funcionarios[0].cargo # exibe o cargo do funcionário criado automaticamente pel
 
 ## Traduções
 
+Instalar gettext no sistema operacional (WSL)
+
+```bash
+sudo apt-get install gettext
+```
+
+Gerar arquivos de tradução
+
 ```bash
 python manage.py makemessages -l es # criar arquivo de tradução para espanhol
 python manage.py compilemessages # compilar os arquivos de tradução
+```
+
+Editar os arquivos de tradução na pasta Locale, utilizado, por exemplo, o Poedit.
+
+## Instalar Redis no WSL
+
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install redis-server # instalar o redis
+sudo service redis-server start # iniciar o serviço do redis
+sudo systemctl status redis-server # verificar o status do serviço do redis
+redis-cli ping # testar se o redis está funcionando (deve retornar PONG)
+```
+
+## Instalar bibliotecas necessárias para o projeto do Chat
+
+```bash
+pip install django django-channels django-bootstrap4 channels-redis
 ```
