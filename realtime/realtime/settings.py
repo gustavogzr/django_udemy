@@ -130,7 +130,7 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            'hosts': [('127.0.0.1', 6379)], # Endereço do servidor Redis
+            'hosts': [('172.28.116.26', 6379)], # Endereço IP do WSL onde o Redis está rodando
         },
     },
 }
