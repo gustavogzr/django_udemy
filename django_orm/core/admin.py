@@ -13,6 +13,9 @@ class ChassiAdmin(admin.ModelAdmin):
 
 @admin.register(Carro)
 class CarroAdmin(admin.ModelAdmin):
-    list_display = ('montadora', 'modelo', 'chassi', 'preco')
+    list_display = ('montadora', 'modelo', 'chassi', 'preco', 'get_motoristas')
 
+    def get_motoristas(self, obj):
+        return ", ".join([motorista.username for motorista in obj.motoristas.all()])
 
+    get_motoristas.short_description = 'Motoristas' # Define o nome da coluna na interface admin
