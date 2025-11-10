@@ -22,7 +22,11 @@ class Montadora(models.Model):
     
     def __str__(self):
         return self.nome
-    
+
+def set_default_montadora():
+    return Montadora.objects.get_or_create(nome='Padrão')[0] # Retorna a montadora padrão, criando-a se não existir
+    # get_or_create retorna uma tupla (objeto, criado), por isso o [0] para pegar apenas o objeto. O criado retornará True se o objeto foi criado, False se já existia.
+
 class Carro(models.Model):
     """
     # One to One Relationship:
@@ -38,7 +42,14 @@ class Carro(models.Model):
     e cada motorista pode dirigir vários carros.
     """
     chassi = models.OneToOneField(Chassi, on_delete=models.CASCADE) # Relacionamento Um para Um
-    montadora = models.ForeignKey(Montadora, on_delete=models.CASCADE) # Relacionamento Muitos para Um
+
+    # montadora = models.ForeignKey(Montadora, on_delete=models.CASCADE) 
+    # Exemplo com CASCADE: se a montadora for deletada, os carros associados também serão deletados
+    # montadora = models.ForeignKey(Montadora, on_delete=models.SET_DEFAULT, default=1)
+    # Exemplo com SET_DEFAULT: se a montadora for deletada, os carros associados terão a montadora padrão (id=1)
+    montadora = models.ForeignKey(Montadora, on_delete=models.SET(set_default_montadora))
+    # Exemplo com SET: se a montadora for deletada, os carros associados terão a montadora definida pela função set_default_montadora
+    
     motoristas = models.ManyToManyField(get_user_model()) # Relacionamento Muitos para Muitos
     modelo = models.CharField('Modelo', max_length=30, help_text='Modelo do carro. Máximo de 30 caracteres.')
     preco = models.DecimalField('Preço', max_digits=8, decimal_places=2)
