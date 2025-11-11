@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'chat',
     'bootstrap4',
     'channels',
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

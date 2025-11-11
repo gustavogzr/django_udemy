@@ -114,8 +114,10 @@ sudo systemctl status redis-server # verificar o status do serviço do redis
 redis-cli ping # testar se o redis está funcionando (deve retornar PONG)
 ```
 
-## Instalar bibliotecas necessárias para o projeto do Chat
+## Projeto do Chat
 
 ```bash
-pip install django django-channels django-bootstrap4 channels-redis
+pip install django django-channels django-bootstrap4 channels-redis # instalar bibliotecas necessárias
+python3 -m pip install -U channels["daphne"] # instalar daphne para o channels
+daphne -b 0.0.0.0 -p 8000 realtime.asgi:application # iniciar o servidor daphne
 ```
