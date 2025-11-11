@@ -121,3 +121,9 @@ pip install django django-channels django-bootstrap4 channels-redis # instalar b
 python3 -m pip install -U channels["daphne"] # instalar daphne para o channels
 daphne -b 0.0.0.0 -p 8000 realtime.asgi:application # iniciar o servidor daphne
 ```
+
+## Projeto de Geolocalização
+
+```bash
+pip install geoip2 requests # instalar bibliotecas necessárias
+```
